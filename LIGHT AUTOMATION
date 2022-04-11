@@ -1,0 +1,12 @@
+#include<stdio.h>
+
+int main()
+{
+   int p,s,lin,lout;
+   printf("ENTER 1/0 for PERSON IN or PERSON OUT and DAY or NIGHT\n");
+   scanf("%d %d",&p,&s);
+   lin=p*(!s);
+   lout=!s;
+   printf("Lin=%d Lout=%d",lin,lout);
+    return 0;
+}
