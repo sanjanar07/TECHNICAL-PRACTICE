@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include<ctype.h>
+#include<stdlib.h>
+
+int main()
+{
+    char ch;
+    int ncnt=0,vcnt=0,total=0,namt=20,vamt=5;
+    extra=25;
+    printf("Enter the character:\n");
+    printf("N/n - NORMAL VEHICLE\nV/v - VIP VEHICLE\nD/d - DISPLAY DETAILS\nQ/q - QUIT\n");
+    ch=' ';
+    while(ch!='q'||ch!='Q')
+    {
+        scanf("%c",&ch);
+        ch=tolower(ch);
+        switch(ch)
+        {
+            case 'n':ncnt++;
+                     break;
+            case 'v':vcnt++;
+                     break;
+            case 'd':printf("THE NUMBER OF NORMAL VEHICLE-%d\n",ncnt);  
+                     printf("THE NUMBER OF VIP VEHICLE-%d\n",vcnt); 
+                     total=namt*ncnt+vamt*vcnt;
+                     printf("TOTAL AMOUNT=%d",total);
+                     break;
+            case 'q':exit(0);
+        }
+    }
+    return 0;
+}
