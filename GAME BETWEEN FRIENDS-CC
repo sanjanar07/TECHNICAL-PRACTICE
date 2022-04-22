@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+void func(int n,int s,int c,int d)
+{
+    if(n<s)
+           n+=c;
+    else
+           s+=c;
+        
+    if(n<s)
+           n+=d;
+    else
+           s+=d;
+           
+    if(n>=s)
+           cout<<"N\n";
+    else
+           cout<<"S\n";
+
+}
+int main() 
+{
+    int t,n,s,c,d;
+    cin>>t;
+    for(int i=1;i<=t;i++)
+    {
+        cin>>n>>s>>c>>d;
+        func(n,s,c,d);
+        
+    }
+	return 0;
+}
